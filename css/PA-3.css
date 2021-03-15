@@ -1,0 +1,24 @@
+.box{
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.input{
+    padding-left: 36%;
+    padding-bottom:10px;
+}
+
+button{
+    border-radius:10px;
+    background-color: #570b0b;
+    color:white;
+    width:70px;
+}
+
+input{
+    border-radius:7px;
+    text-align:right;
+    width:200px;
+}
