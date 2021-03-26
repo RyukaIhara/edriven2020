@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" type="icon" href="img/logo.png">
+    <title>RYUKA'S-INVENTORY</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="navigation"> 
+        <div><img src="img/logo.png" width="40" height="40" style="margin-bottom: 60%; margin-top: 10%;"></div>
+        </div>
+        <a class="navbar-brand" href="landing.html">RYUKA'S-INVENTORY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="landing.html" style="color: gray">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="" style="color: gray">Contacts
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html" style="color: white;">Order</a>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+         
+          </form>
+        </div>
+      </nav>
+    
+      <div class="receipt" style="width: 80%; overflow:auto; margin: auto; margin-top: 5%;">
+        <h3>ORDERS:</h3>
+        <button type="button" class="btn btn-primary" style="margin-top: 1%; margin-bottom: 1%; float: right;" data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
+    
+        <table class="table table-hover" style="align-self: center;" id ="tblist">
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+               
+              </tr>
+            </tbody>
+          </table>
+
+   
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New Order</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="choice1">OR</label>
+                    <div class="row" >
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control" id="OR" placeholder="OR Number" style="width: 200%;">
+                        </div>
+                    </div>
+                    <label for="choice1">Name</label>
+                    <div class="row">
+                        <div class="col-3 form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Customer Name" style="width: 300%;">
+                        </div>
+                    </div>
+                    </div>
+                <label for="choice1" style="margin-left: 1%; margin-right: 1%;">Items</label>
+                 <div class="row" style="margin-left: 1%; margin-right: 1%;">
+                    <div class="col-3 form-group">
+                        <select class="form-control" id="choice1">
+                          
+                        </select>
+                    </div>
+
+                    <div class="col-3 form-group">
+                        <input type="number" class="form-control" id="price1" min="1" oninput="fill1()">
+                    </div>
+                    <div class="col-3 form-group">
+                        <input type="number" class="form-control" id="quantity1" oninput="fill1()" min="1">
+                    </div>
+                    <div class="col-3 form-group">
+                        <input class="form-control" id="subtotal1" type="text" placeholder="subtotal" disabled="">
+                    </div>
+                    
+                </div>
+                <div class="row" style="margin-left: 1%; margin-right: 1%;">
+                    <div class="col-3 form-group">
+               
+                        <select class="form-control" id="choice2">
+                          
+                        </select>
+                 </div>
+                 <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="price2" min="1" oninput="fill2()">
+                </div>
+                <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="quantity2" oninput="fill2()" min="1">
+                </div>
+                <div class="col-3 form-group">
+                    <input class="form-control" id="subtotal2" type="text" placeholder="subtotal" disabled="">
+                </div>
+                </div>
+                <div class="row" style="margin-left: 1%; margin-right: 1%;">
+                    <div class="col-3 form-group">
+                        
+                        <select class="form-control" id="choice3">
+                          
+                        </select>
+                 </div>
+                 <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="price3" min="1" oninput="fill3()">
+                </div>
+                <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="quantity3" oninput="fill3()" min="1">
+                </div>
+                <div class="col-3 form-group">
+                    <input class="form-control" id="subtotal3" type="text" placeholder="subtotal" disabled="">
+                </div>
+                </div>
+                <div class="row" style="margin-left: 1%; margin-right: 1%;">
+                    <div class="col-3 form-group">
+           
+                        <select class="form-control" id="choice4">
+                          
+                        </select>
+                 </div>
+                 <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="price4" min="1" oninput="fill4()">
+                </div>
+                <div class="col-3 form-group">
+                    <input type="number" class="form-control" id="quantity4" oninput="fill4()" min="1">
+                </div>
+                <div class="col-3 form-group">
+                    <input class="form-control" id="subtotal4" type="text" placeholder="subtotal" disabled="">
+                </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" id="save" onclick="save()" data-bs-dismiss="modal">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+
+          <div class="modal fade" id="ModalView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">View Order</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row" >
+                    <div class="col-3 form-group">
+                      <input class="form-control" id="ORV" type="text" placeholder="" disabled="" style="width:455%">
+                    </div>
+                </div>
+                <div class="row" >
+                  <div class="col-3 form-group">
+                    <input class="form-control" id="fullnameV" type="text" placeholder="" disabled="" style="width:455%">
+                  </div>
+              </div>
+              <label>Items</label>
+                <div class="row" id ="pics">
+                  <div class="col-3 form-group" id="img1" style="border:1px solid gray; padding-top: 2%;padding-bottom: 5%;">
+                    
+                  </div>
+                  <div class="col-3 form-group" id="img2" style="border:1px solid gray; padding-top: 2%;padding-bottom: 2%;">
+                    
+                  </div>
+                  <div class="col-3 form-group" id="img3" style="border:1px solid gray; padding-top: 2%;padding-bottom: 2%;">
+                   
+                  </div>
+                  <div class="col-3 form-group" id="img4" style="border:1px solid gray; padding-top: 2%;padding-bottom: 2%;">
+                   
+                  </div>
+              </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <script src="../_vendor/jquery/dist/jquery.min.js"></script>
+          <script src="../_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="js\order.js"></script>
+</body>
+</html>
